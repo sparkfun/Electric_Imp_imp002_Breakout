@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -11968,7 +11968,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <part name="R2" library="SparkFun-Resistors" deviceset="330OHM1/10W1%(0603)" device="" value="330"/>
 <part name="R3" library="SparkFun-Resistors" deviceset="330OHM1/10W1%(0603)" device="" value="330"/>
 <part name="P+6" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
-<part name="R4" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="68k"/>
+<part name="R4" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="62k"/>
 <part name="GND13" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="JP1" library="SparkFun-Connectors" deviceset="M15" device=""/>
 <part name="P+7" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
