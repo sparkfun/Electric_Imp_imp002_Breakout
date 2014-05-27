@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -7204,7 +7204,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="ELECTRIC_IMP_IMP002">
+<deviceset name="ELECTRIC_IMP_IMP002" prefix="U">
 <gates>
 <gate name="G$1" symbol="ELECTRIC_IMP_IMP002" x="0" y="0"/>
 </gates>
@@ -9738,6 +9738,47 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 <circle x="0" y="0" radius="0.508" width="0" layer="29"/>
 <circle x="0" y="0" radius="0.9398" width="0" layer="30"/>
 </package>
+<package name="USB-A-SMT-MALE-LOCKING">
+<wire x1="6" y1="14.58" x2="-6" y2="14.58" width="0.2032" layer="51"/>
+<wire x1="6" y1="0" x2="-6" y2="0" width="0.2032" layer="21"/>
+<wire x1="6" y1="0" x2="6" y2="14.58" width="0.2032" layer="51"/>
+<wire x1="-6" y1="0" x2="-6" y2="14.58" width="0.2032" layer="51"/>
+<wire x1="6" y1="0" x2="6" y2="-1.22" width="0.2032" layer="21"/>
+<wire x1="-6" y1="0" x2="-6" y2="-1.22" width="0.2032" layer="21"/>
+<wire x1="-4" y1="-4.22" x2="4" y2="-4.22" width="0.2032" layer="21"/>
+<wire x1="4.3" y1="10.28" x2="1.9" y2="10.28" width="0.2032" layer="51"/>
+<wire x1="1.9" y1="10.28" x2="1.9" y2="7.98" width="0.2032" layer="51"/>
+<wire x1="1.9" y1="7.98" x2="4.3" y2="7.98" width="0.2032" layer="51"/>
+<wire x1="4.3" y1="7.98" x2="4.3" y2="10.28" width="0.2032" layer="51"/>
+<wire x1="-1.9" y1="10.28" x2="-4.3" y2="10.28" width="0.2032" layer="51"/>
+<wire x1="-4.3" y1="10.28" x2="-4.3" y2="7.98" width="0.2032" layer="51"/>
+<wire x1="-4.3" y1="7.98" x2="-1.9" y2="7.98" width="0.2032" layer="51"/>
+<wire x1="-1.9" y1="7.98" x2="-1.9" y2="10.28" width="0.2032" layer="51"/>
+<smd name="D+1" x="1.027" y="-5.87" dx="2.5" dy="0.8" layer="1" rot="R270"/>
+<smd name="D-1" x="-1.027" y="-5.87" dx="2.5" dy="0.8" layer="1" rot="R270"/>
+<smd name="GND1" x="3.5508" y="-5.87" dx="2.5" dy="0.8" layer="1" rot="R270"/>
+<pad name="P$1" x="5.6468" y="-3.05" drill="0.8" diameter="1.778" shape="long" rot="R90"/>
+<pad name="P$3" x="-5.6468" y="-3.05" drill="0.8" diameter="1.778" shape="long" rot="R90"/>
+<smd name="VBUS1" x="-3.5" y="-5.87" dx="2.5" dy="0.8" layer="1" rot="R270"/>
+<text x="-2.7" y="-9.07" size="1.27" layer="25">&gt;NAME</text>
+<text x="-4.4" y="0.68" size="1.27" layer="51">PCB Edge</text>
+<hole x="2.25" y="-3.12" drill="1.1"/>
+<hole x="-2.25" y="-3.12" drill="1.1"/>
+<hole x="-5.6468" y="-3.45" drill="0.8"/>
+<hole x="-5.6468" y="-3.85" drill="0.8"/>
+<hole x="-5.6468" y="-2.65" drill="0.8"/>
+<hole x="-5.6468" y="-2.25" drill="0.8"/>
+<hole x="5.6468" y="-3.45" drill="0.8"/>
+<hole x="5.6468" y="-3.85" drill="0.8"/>
+<hole x="5.6468" y="-2.65" drill="0.8"/>
+<hole x="5.6468" y="-2.25" drill="0.8"/>
+<wire x1="-5.9944" y1="-4.064" x2="-5.9944" y2="-2.0828" width="0" layer="51"/>
+<wire x1="-6.1849" y1="-4.064" x2="-6.1849" y2="-2.032" width="0" layer="51"/>
+<wire x1="-5.6642" y1="-4.064" x2="-5.6642" y2="-2.0828" width="0" layer="51"/>
+<rectangle x1="-5.9944" y1="-4.064" x2="-5.6642" y2="-2.032" layer="51"/>
+<wire x1="6.1849" y1="-2.032" x2="6.1849" y2="-4.064" width="0" layer="51"/>
+<rectangle x1="5.6642" y1="-4.064" x2="5.9944" y2="-2.032" layer="51" rot="R180"/>
+</package>
 </packages>
 <symbols>
 <symbol name="M02">
@@ -10243,6 +10284,17 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 <technology name=""/>
 </technologies>
 </device>
+<device name="A-SMD-MALE-LOCKING" package="USB-A-SMT-MALE-LOCKING">
+<connects>
+<connect gate="G$1" pin="D+" pad="D+1"/>
+<connect gate="G$1" pin="D-" pad="D-1"/>
+<connect gate="G$1" pin="GND" pad="GND1"/>
+<connect gate="G$1" pin="VBUS" pad="VBUS1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="M15" prefix="JP">
@@ -10547,6 +10599,27 @@ Basic SMA packaged diode. Good for reverse polarization protection. Common part 
 <text x="-2.286" y="1.651" size="0.4064" layer="25">&gt;NAME</text>
 <text x="0.254" y="1.651" size="0.4064" layer="27">&gt;VALUE</text>
 </package>
+<package name="PT17-21C-L41-TR8">
+<smd name="C" x="0" y="1.05" dx="1.2" dy="1.2" layer="1"/>
+<smd name="E" x="0" y="-1.05" dx="1.2" dy="1.2" layer="1"/>
+<text x="-0.8" y="-1" size="0.4064" layer="25" rot="R90">&gt;NAME</text>
+<text x="1.2" y="-1" size="0.4064" layer="27" rot="R90">&gt;VALUE</text>
+<rectangle x1="-0.6" y1="0.1" x2="-0.3" y2="0.3" layer="51"/>
+<rectangle x1="0.3" y1="0.1" x2="0.6" y2="0.3" layer="21"/>
+<wire x1="0.625" y1="1" x2="0.625" y2="-1" width="0.127" layer="51"/>
+<wire x1="0.625" y1="-1" x2="0.4" y2="-1" width="0.127" layer="51"/>
+<wire x1="0.4" y1="-1" x2="-0.4" y2="-1" width="0.127" layer="51"/>
+<wire x1="-0.4" y1="-1" x2="-0.625" y2="-1" width="0.127" layer="51"/>
+<wire x1="-0.625" y1="-1" x2="-0.625" y2="-0.8" width="0.127" layer="51"/>
+<wire x1="-0.625" y1="-0.8" x2="-0.625" y2="1" width="0.127" layer="51"/>
+<wire x1="0.4" y1="1" x2="-0.4" y2="1" width="0.127" layer="51" curve="-180"/>
+<wire x1="-0.625" y1="1" x2="0.625" y2="1" width="0.127" layer="51"/>
+<wire x1="-0.4" y1="-1" x2="0.4" y2="-1" width="0.127" layer="51" curve="-180"/>
+<wire x1="-0.35" y1="-0.8" x2="-0.625" y2="-0.8" width="0.127" layer="51"/>
+<wire x1="0.6" y1="-0.8" x2="0.35" y2="-0.8" width="0.127" layer="51"/>
+<rectangle x1="-0.6" y1="0.1" x2="-0.3" y2="0.3" layer="21"/>
+<rectangle x1="0.3" y1="0.1" x2="0.6" y2="0.3" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="MOSFET-PCHANNEL">
@@ -10605,6 +10678,35 @@ Basic SMA packaged diode. Good for reverse polarization protection. Common part 
 <pin name="C" x="2.54" y="0" visible="off" length="point" direction="pas" rot="R180"/>
 <wire x1="-2.54" y1="0" x2="-1.27" y2="0" width="0.1524" layer="94"/>
 <wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="PHOTOTRANSISTOR">
+<wire x1="-2.794" y1="1.778" x2="-1.397" y2="0.381" width="0.1524" layer="94"/>
+<wire x1="-2.921" y1="0.635" x2="-1.524" y2="-0.762" width="0.1524" layer="94"/>
+<polygon width="0.1524" layer="94">
+<vertex x="-1.397" y="0.381"/>
+<vertex x="-2.286" y="0.762"/>
+<vertex x="-1.778" y="1.27"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="-1.524" y="-0.762"/>
+<vertex x="-2.413" y="-0.381"/>
+<vertex x="-1.905" y="0.127"/>
+</polygon>
+<wire x1="2.54" y1="2.54" x2="0.508" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="1.778" y1="-1.524" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="1.27" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="1.778" y2="-1.524" width="0.1524" layer="94"/>
+<wire x1="1.54" y1="-2.04" x2="0.308" y2="-1.424" width="0.1524" layer="94"/>
+<wire x1="1.524" y1="-2.413" x2="2.286" y2="-2.413" width="0.254" layer="94"/>
+<wire x1="2.286" y1="-2.413" x2="1.778" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="1.778" y1="-1.778" x2="1.524" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-2.286" x2="1.905" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="1.905" y1="-2.286" x2="1.778" y2="-2.032" width="0.254" layer="94"/>
+<text x="5.08" y="0" size="1.778" layer="95">&gt;NAME</text>
+<text x="5.08" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="-0.254" y1="-2.54" x2="0.508" y2="2.54" layer="94"/>
+<pin name="E" x="2.54" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="C" x="2.54" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -10756,6 +10858,24 @@ B340A  3A 40V SMA &lt;br&gt;</description>
 <technology name="">
 <attribute name="PROD_ID" value="DIO-09886"/>
 <attribute name="VALUE" value="B340A" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PHOTOTRANSISTOR" prefix="Q">
+<gates>
+<gate name="G$1" symbol="PHOTOTRANSISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="PT17-21C-L41-TR8" package="PT17-21C-L41-TR8">
+<connects>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="E" pad="E"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="TRANS-12141"/>
 </technology>
 </technologies>
 </device>
@@ -11157,82 +11277,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="Testing">
-<packages>
-<package name="PT17-21C-L41-TR8">
-<smd name="C" x="0" y="1.05" dx="1.2" dy="1.2" layer="1"/>
-<smd name="E" x="0" y="-1.05" dx="1.2" dy="1.2" layer="1"/>
-<text x="-0.8" y="-1" size="0.4064" layer="25" rot="R90">&gt;NAME</text>
-<text x="1.2" y="-1" size="0.4064" layer="27" rot="R90">&gt;VALUE</text>
-<rectangle x1="-0.6" y1="0.1" x2="-0.3" y2="0.3" layer="51"/>
-<rectangle x1="0.3" y1="0.1" x2="0.6" y2="0.3" layer="21"/>
-<wire x1="0.625" y1="1" x2="0.625" y2="-1" width="0.127" layer="51"/>
-<wire x1="0.625" y1="-1" x2="0.4" y2="-1" width="0.127" layer="51"/>
-<wire x1="0.4" y1="-1" x2="-0.4" y2="-1" width="0.127" layer="51"/>
-<wire x1="-0.4" y1="-1" x2="-0.625" y2="-1" width="0.127" layer="51"/>
-<wire x1="-0.625" y1="-1" x2="-0.625" y2="-0.8" width="0.127" layer="51"/>
-<wire x1="-0.625" y1="-0.8" x2="-0.625" y2="1" width="0.127" layer="51"/>
-<wire x1="0.4" y1="1" x2="-0.4" y2="1" width="0.127" layer="51" curve="-180"/>
-<wire x1="-0.625" y1="1" x2="0.625" y2="1" width="0.127" layer="51"/>
-<wire x1="-0.4" y1="-1" x2="0.4" y2="-1" width="0.127" layer="51" curve="-180"/>
-<wire x1="-0.35" y1="-0.8" x2="-0.625" y2="-0.8" width="0.127" layer="51"/>
-<wire x1="0.6" y1="-0.8" x2="0.35" y2="-0.8" width="0.127" layer="51"/>
-<rectangle x1="-0.6" y1="0.1" x2="-0.3" y2="0.3" layer="21"/>
-<rectangle x1="0.3" y1="0.1" x2="0.6" y2="0.3" layer="51"/>
-</package>
-</packages>
-<symbols>
-<symbol name="PHOTOTRANSISTOR">
-<wire x1="-2.794" y1="1.778" x2="-1.397" y2="0.381" width="0.1524" layer="94"/>
-<wire x1="-2.921" y1="0.635" x2="-1.524" y2="-0.762" width="0.1524" layer="94"/>
-<polygon width="0.1524" layer="94">
-<vertex x="-1.397" y="0.381"/>
-<vertex x="-2.286" y="0.762"/>
-<vertex x="-1.778" y="1.27"/>
-</polygon>
-<polygon width="0.1524" layer="94">
-<vertex x="-1.524" y="-0.762"/>
-<vertex x="-2.413" y="-0.381"/>
-<vertex x="-1.905" y="0.127"/>
-</polygon>
-<wire x1="2.54" y1="2.54" x2="0.508" y2="1.524" width="0.1524" layer="94"/>
-<wire x1="1.778" y1="-1.524" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="-2.54" x2="1.27" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="1.27" y1="-2.54" x2="1.778" y2="-1.524" width="0.1524" layer="94"/>
-<wire x1="1.54" y1="-2.04" x2="0.308" y2="-1.424" width="0.1524" layer="94"/>
-<wire x1="1.524" y1="-2.413" x2="2.286" y2="-2.413" width="0.254" layer="94"/>
-<wire x1="2.286" y1="-2.413" x2="1.778" y2="-1.778" width="0.254" layer="94"/>
-<wire x1="1.778" y1="-1.778" x2="1.524" y2="-2.286" width="0.254" layer="94"/>
-<wire x1="1.524" y1="-2.286" x2="1.905" y2="-2.286" width="0.254" layer="94"/>
-<wire x1="1.905" y1="-2.286" x2="1.778" y2="-2.032" width="0.254" layer="94"/>
-<text x="5.08" y="0" size="1.778" layer="95">&gt;NAME</text>
-<text x="5.08" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
-<rectangle x1="-0.254" y1="-2.54" x2="0.508" y2="2.54" layer="94"/>
-<pin name="E" x="2.54" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
-<pin name="C" x="2.54" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="PT17-21C-L41-TR8">
-<gates>
-<gate name="G$1" symbol="PHOTOTRANSISTOR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="PT17-21C-L41-TR8">
-<connects>
-<connect gate="G$1" pin="C" pad="C"/>
-<connect gate="G$1" pin="E" pad="E"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="PROD_ID" value=""/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="SparkFun-LED">
 <description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
 In this library you'll find discrete LEDs for illumination or indication, but no displays.&lt;br&gt;&lt;br&gt;
@@ -11323,7 +11367,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="LED-RG">
+<deviceset name="LED-RG" prefix="D">
 <gates>
 <gate name="G$1" symbol="LED-RG" x="-2.54" y="0"/>
 </gates>
@@ -11799,10 +11843,10 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </device>
 </devices>
 </deviceset>
-<deviceset name="1MOHM1/10W1%(0603)" prefix="R" uservalue="yes">
-<description>RES-07868</description>
+<deviceset name="33KOHM1/10W1%(0603)" prefix="R" uservalue="yes">
+<description>RES-08416</description>
 <gates>
-<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+<gate name="G$1" symbol="RESISTOR" x="-17.78" y="17.78"/>
 </gates>
 <devices>
 <device name="" package="0603-RES">
@@ -11811,9 +11855,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
-<technology name="">
-<attribute name="PROD_ID" value="RES-07868" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -11888,7 +11930,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 </classes>
 <parts>
 <part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
-<part name="U$1" library="SparkFun-DigitalIC" deviceset="ELECTRIC_IMP_IMP002" device="" value="imp002"/>
+<part name="U1" library="SparkFun-DigitalIC" deviceset="ELECTRIC_IMP_IMP002" device="" value="imp002"/>
 <part name="C2" library="SparkFun-Passives" deviceset="CAP" device="0805" value="22uF"/>
 <part name="L1" library="SparkFun-Passives" deviceset="INDUCTOR" device="VLF4012A" value="2.2uH"/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -11921,8 +11963,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <part name="P+3" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="SJ1" library="SparkFun-Passives" deviceset="JUMPER-PAD-2-NC_BY_PASTE" device=""/>
 <part name="P+5" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
-<part name="U$4" library="Testing" deviceset="PT17-21C-L41-TR8" device=""/>
-<part name="U$5" library="SparkFun-LED" deviceset="LED-RG" device="LTST-C195KGJRKT"/>
+<part name="Q2" library="SparkFun-DiscreteSemi" deviceset="PHOTOTRANSISTOR" device="PT17-21C-L41-TR8"/>
+<part name="D2" library="SparkFun-LED" deviceset="LED-RG" device="LTST-C195KGJRKT"/>
 <part name="R2" library="SparkFun-Resistors" deviceset="330OHM1/10W1%(0603)" device="" value="330"/>
 <part name="R3" library="SparkFun-Resistors" deviceset="330OHM1/10W1%(0603)" device="" value="330"/>
 <part name="P+6" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
@@ -11943,8 +11985,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <part name="U$7" library="SparkFun-Aesthetics" deviceset="VIN" device=""/>
 <part name="GND15" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="U$6" library="SparkFun-Passives" deviceset="JUMPER-PAD-3-NO" device="FULL_BOX_SILK"/>
-<part name="R5" library="SparkFun-Resistors" deviceset="1MOHM1/10W1%(0603)" device="" value="1M"/>
-<part name="R6" library="SparkFun-Resistors" deviceset="1MOHM1/10W1%(0603)" device="" value="1M"/>
+<part name="R5" library="SparkFun-Resistors" deviceset="33KOHM1/10W1%(0603)" device="" value="33k"/>
+<part name="R6" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="62k"/>
 <part name="U$8" library="SparkFun-Aesthetics" deviceset="VIN" device=""/>
 <part name="GND10" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="C7" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="100pF"/>
@@ -11992,16 +12034,18 @@ VDD</text>
 <text x="114.3" y="91.44" size="1.778" layer="97">By default, the jumper is
 open. Solder the entire
 jumper to allow for VIN
-measurements on the Imp.</text>
+measurements on the Imp.
+This limits VIN to 5V max.</text>
 <text x="13.208" y="110.998" size="1.778" layer="97" rot="R90">Battery Input</text>
 <text x="170.942" y="7.62" size="2.032" layer="94">Shawn Hymel (SparkFun Electronics)
 Based on Electric Imp's Amber board</text>
 <text x="238.76" y="7.62" size="2.54" layer="94">v01</text>
+<text x="48.26" y="99.06" size="1.778" layer="97">VIN = 3.3 - 17V</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="G$2" x="147.32" y="0"/>
-<instance part="U$1" gate="G$1" x="195.58" y="86.36"/>
+<instance part="U1" gate="G$1" x="195.58" y="86.36"/>
 <instance part="C2" gate="G$1" x="144.78" y="144.78"/>
 <instance part="L1" gate="G$1" x="129.54" y="152.4" smashed="yes" rot="R90">
 <attribute name="NAME" x="124.46" y="154.94" size="1.778" layer="95" rot="R90"/>
@@ -12042,8 +12086,10 @@ Based on Electric Imp's Amber board</text>
 <attribute name="NAME" x="226.06" y="104.14" size="1.778" layer="95" rot="R90"/>
 </instance>
 <instance part="P+5" gate="G$1" x="220.98" y="116.84"/>
-<instance part="U$4" gate="G$1" x="121.92" y="60.96"/>
-<instance part="U$5" gate="G$1" x="88.9" y="58.42" smashed="yes">
+<instance part="Q2" gate="G$1" x="121.92" y="60.96" smashed="yes">
+<attribute name="NAME" x="127" y="60.96" size="1.778" layer="95"/>
+</instance>
+<instance part="D2" gate="G$1" x="88.9" y="58.42" smashed="yes">
 <attribute name="NAME" x="80.264" y="61.976" size="1.778" layer="95"/>
 <attribute name="VALUE" x="102.235" y="41.148" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -12140,10 +12186,10 @@ Based on Electric Imp's Amber board</text>
 <pinref part="GND5" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="GND@1"/>
+<pinref part="U1" gate="G$1" pin="GND@1"/>
 <wire x1="218.44" y1="96.52" x2="220.98" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="220.98" y1="96.52" x2="220.98" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="GND@7"/>
+<pinref part="U1" gate="G$1" pin="GND@7"/>
 <wire x1="220.98" y1="93.98" x2="220.98" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="220.98" y1="91.44" x2="220.98" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="220.98" y1="88.9" x2="220.98" y2="86.36" width="0.1524" layer="91"/>
@@ -12160,43 +12206,43 @@ Based on Electric Imp's Amber board</text>
 <wire x1="220.98" y1="60.96" x2="220.98" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="93.98" x2="220.98" y2="93.98" width="0.1524" layer="91"/>
 <junction x="220.98" y="93.98"/>
-<pinref part="U$1" gate="G$1" pin="GND@13"/>
+<pinref part="U1" gate="G$1" pin="GND@13"/>
 <wire x1="218.44" y1="91.44" x2="220.98" y2="91.44" width="0.1524" layer="91"/>
 <junction x="220.98" y="91.44"/>
-<pinref part="U$1" gate="G$1" pin="GND@17"/>
+<pinref part="U1" gate="G$1" pin="GND@17"/>
 <wire x1="218.44" y1="88.9" x2="220.98" y2="88.9" width="0.1524" layer="91"/>
 <junction x="220.98" y="88.9"/>
-<pinref part="U$1" gate="G$1" pin="GND@23"/>
+<pinref part="U1" gate="G$1" pin="GND@23"/>
 <wire x1="218.44" y1="86.36" x2="220.98" y2="86.36" width="0.1524" layer="91"/>
 <junction x="220.98" y="86.36"/>
-<pinref part="U$1" gate="G$1" pin="GND@24"/>
+<pinref part="U1" gate="G$1" pin="GND@24"/>
 <wire x1="218.44" y1="83.82" x2="220.98" y2="83.82" width="0.1524" layer="91"/>
 <junction x="220.98" y="83.82"/>
-<pinref part="U$1" gate="G$1" pin="GND@25"/>
+<pinref part="U1" gate="G$1" pin="GND@25"/>
 <wire x1="218.44" y1="81.28" x2="220.98" y2="81.28" width="0.1524" layer="91"/>
 <junction x="220.98" y="81.28"/>
-<pinref part="U$1" gate="G$1" pin="GND@26"/>
+<pinref part="U1" gate="G$1" pin="GND@26"/>
 <wire x1="218.44" y1="78.74" x2="220.98" y2="78.74" width="0.1524" layer="91"/>
 <junction x="220.98" y="78.74"/>
-<pinref part="U$1" gate="G$1" pin="GND@27"/>
+<pinref part="U1" gate="G$1" pin="GND@27"/>
 <wire x1="218.44" y1="76.2" x2="220.98" y2="76.2" width="0.1524" layer="91"/>
 <junction x="220.98" y="76.2"/>
-<pinref part="U$1" gate="G$1" pin="GND@28"/>
+<pinref part="U1" gate="G$1" pin="GND@28"/>
 <wire x1="218.44" y1="73.66" x2="220.98" y2="73.66" width="0.1524" layer="91"/>
 <junction x="220.98" y="73.66"/>
-<pinref part="U$1" gate="G$1" pin="GND@29"/>
+<pinref part="U1" gate="G$1" pin="GND@29"/>
 <wire x1="218.44" y1="71.12" x2="220.98" y2="71.12" width="0.1524" layer="91"/>
 <junction x="220.98" y="71.12"/>
-<pinref part="U$1" gate="G$1" pin="GND@30"/>
+<pinref part="U1" gate="G$1" pin="GND@30"/>
 <wire x1="218.44" y1="68.58" x2="220.98" y2="68.58" width="0.1524" layer="91"/>
 <junction x="220.98" y="68.58"/>
-<pinref part="U$1" gate="G$1" pin="GND@31"/>
+<pinref part="U1" gate="G$1" pin="GND@31"/>
 <wire x1="218.44" y1="66.04" x2="220.98" y2="66.04" width="0.1524" layer="91"/>
 <junction x="220.98" y="66.04"/>
-<pinref part="U$1" gate="G$1" pin="GND@32"/>
+<pinref part="U1" gate="G$1" pin="GND@32"/>
 <wire x1="218.44" y1="63.5" x2="220.98" y2="63.5" width="0.1524" layer="91"/>
 <junction x="220.98" y="63.5"/>
-<pinref part="U$1" gate="G$1" pin="GND@35"/>
+<pinref part="U1" gate="G$1" pin="GND@35"/>
 <wire x1="218.44" y1="60.96" x2="220.98" y2="60.96" width="0.1524" layer="91"/>
 <junction x="220.98" y="60.96"/>
 <pinref part="GND6" gate="1" pin="GND"/>
@@ -12290,10 +12336,10 @@ Based on Electric Imp's Amber board</text>
 <pinref part="P+3" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="VDD@33"/>
+<pinref part="U1" gate="G$1" pin="VDD@33"/>
 <wire x1="218.44" y1="106.68" x2="220.98" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="220.98" y1="106.68" x2="220.98" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="VDD@18"/>
+<pinref part="U1" gate="G$1" pin="VDD@18"/>
 <wire x1="220.98" y1="109.22" x2="220.98" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="109.22" x2="220.98" y2="109.22" width="0.1524" layer="91"/>
 <junction x="220.98" y="109.22"/>
@@ -12305,10 +12351,10 @@ Based on Electric Imp's Amber board</text>
 <pinref part="P+5" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
-<pinref part="U$5" gate="G$1" pin="RA"/>
+<pinref part="D2" gate="G$1" pin="RA"/>
 <wire x1="86.36" y1="63.5" x2="86.36" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="66.04" x2="93.98" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="U$5" gate="G$1" pin="GA"/>
+<pinref part="D2" gate="G$1" pin="GA"/>
 <wire x1="93.98" y1="66.04" x2="93.98" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="66.04" x2="86.36" y2="68.58" width="0.1524" layer="91"/>
 <junction x="86.36" y="66.04"/>
@@ -12381,7 +12427,7 @@ Based on Electric Imp's Amber board</text>
 </net>
 <net name="PIN_1" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="PIN_1"/>
+<pinref part="U1" gate="G$1" pin="PIN_1"/>
 <wire x1="172.72" y1="109.22" x2="170.18" y2="109.22" width="0.1524" layer="91"/>
 <label x="170.18" y="109.22" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -12393,7 +12439,7 @@ Based on Electric Imp's Amber board</text>
 </net>
 <net name="PIN_2" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="PIN_2"/>
+<pinref part="U1" gate="G$1" pin="PIN_2"/>
 <wire x1="172.72" y1="106.68" x2="170.18" y2="106.68" width="0.1524" layer="91"/>
 <label x="170.18" y="106.68" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -12405,7 +12451,7 @@ Based on Electric Imp's Amber board</text>
 </net>
 <net name="PIN_5" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="PIN_5"/>
+<pinref part="U1" gate="G$1" pin="PIN_5"/>
 <wire x1="172.72" y1="104.14" x2="170.18" y2="104.14" width="0.1524" layer="91"/>
 <label x="170.18" y="104.14" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -12417,7 +12463,7 @@ Based on Electric Imp's Amber board</text>
 </net>
 <net name="PIN_6" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="PIN_6"/>
+<pinref part="U1" gate="G$1" pin="PIN_6"/>
 <wire x1="172.72" y1="101.6" x2="170.18" y2="101.6" width="0.1524" layer="91"/>
 <label x="170.18" y="101.6" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -12429,7 +12475,7 @@ Based on Electric Imp's Amber board</text>
 </net>
 <net name="PIN_7" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="PIN_7"/>
+<pinref part="U1" gate="G$1" pin="PIN_7"/>
 <wire x1="172.72" y1="99.06" x2="170.18" y2="99.06" width="0.1524" layer="91"/>
 <label x="170.18" y="99.06" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -12441,7 +12487,7 @@ Based on Electric Imp's Amber board</text>
 </net>
 <net name="PIN_8" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="PIN_8"/>
+<pinref part="U1" gate="G$1" pin="PIN_8"/>
 <wire x1="172.72" y1="96.52" x2="170.18" y2="96.52" width="0.1524" layer="91"/>
 <label x="170.18" y="96.52" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -12453,7 +12499,7 @@ Based on Electric Imp's Amber board</text>
 </net>
 <net name="PIN_9" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="PIN_9"/>
+<pinref part="U1" gate="G$1" pin="PIN_9"/>
 <wire x1="172.72" y1="93.98" x2="170.18" y2="93.98" width="0.1524" layer="91"/>
 <label x="170.18" y="93.98" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -12465,7 +12511,7 @@ Based on Electric Imp's Amber board</text>
 </net>
 <net name="PIN_A" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="PIN_A"/>
+<pinref part="U1" gate="G$1" pin="PIN_A"/>
 <wire x1="172.72" y1="91.44" x2="170.18" y2="91.44" width="0.1524" layer="91"/>
 <label x="170.18" y="91.44" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -12482,7 +12528,7 @@ Based on Electric Imp's Amber board</text>
 </net>
 <net name="PIN_B" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="PIN_B"/>
+<pinref part="U1" gate="G$1" pin="PIN_B"/>
 <wire x1="172.72" y1="88.9" x2="170.18" y2="88.9" width="0.1524" layer="91"/>
 <label x="170.18" y="88.9" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -12494,7 +12540,7 @@ Based on Electric Imp's Amber board</text>
 </net>
 <net name="PIN_C" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="PIN_C"/>
+<pinref part="U1" gate="G$1" pin="PIN_C"/>
 <wire x1="172.72" y1="86.36" x2="170.18" y2="86.36" width="0.1524" layer="91"/>
 <label x="170.18" y="86.36" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -12506,7 +12552,7 @@ Based on Electric Imp's Amber board</text>
 </net>
 <net name="PIN_D" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="PIN_D"/>
+<pinref part="U1" gate="G$1" pin="PIN_D"/>
 <wire x1="172.72" y1="83.82" x2="170.18" y2="83.82" width="0.1524" layer="91"/>
 <label x="170.18" y="83.82" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -12518,7 +12564,7 @@ Based on Electric Imp's Amber board</text>
 </net>
 <net name="PIN_E" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="PIN_E"/>
+<pinref part="U1" gate="G$1" pin="PIN_E"/>
 <wire x1="172.72" y1="81.28" x2="170.18" y2="81.28" width="0.1524" layer="91"/>
 <label x="170.18" y="81.28" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -12530,7 +12576,7 @@ Based on Electric Imp's Amber board</text>
 </net>
 <net name="VDDA" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="VDDA"/>
+<pinref part="U1" gate="G$1" pin="VDDA"/>
 <wire x1="218.44" y1="104.14" x2="220.98" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="220.98" y1="104.14" x2="220.98" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="SJ1" gate="G$1" pin="1"/>
@@ -12558,21 +12604,21 @@ Based on Electric Imp's Amber board</text>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="U$5" gate="G$1" pin="RC"/>
+<pinref part="D2" gate="G$1" pin="RC"/>
 <pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="86.36" y1="50.8" x2="86.36" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
-<pinref part="U$5" gate="G$1" pin="GC"/>
+<pinref part="D2" gate="G$1" pin="GC"/>
 <pinref part="R3" gate="G$1" pin="2"/>
 <wire x1="93.98" y1="50.8" x2="93.98" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="LED_R" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="LED_RED"/>
+<pinref part="U1" gate="G$1" pin="LED_RED"/>
 <wire x1="172.72" y1="68.58" x2="170.18" y2="68.58" width="0.1524" layer="91"/>
 <label x="170.18" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -12585,7 +12631,7 @@ Based on Electric Imp's Amber board</text>
 </net>
 <net name="LED_G" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="LED_GREEN"/>
+<pinref part="U1" gate="G$1" pin="LED_GREEN"/>
 <wire x1="172.72" y1="66.04" x2="170.18" y2="66.04" width="0.1524" layer="91"/>
 <label x="170.18" y="66.04" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -12598,7 +12644,7 @@ Based on Electric Imp's Amber board</text>
 </net>
 <net name="OPTO_BIAS" class="0">
 <segment>
-<pinref part="U$4" gate="G$1" pin="C"/>
+<pinref part="Q2" gate="G$1" pin="C"/>
 <wire x1="124.46" y1="66.04" x2="124.46" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="68.58" x2="129.54" y2="68.58" width="0.1524" layer="91"/>
 <label x="129.54" y="68.58" size="1.27" layer="95" xref="yes"/>
@@ -12608,14 +12654,14 @@ Based on Electric Imp's Amber board</text>
 <junction x="124.46" y="68.58"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="OPTO_BIAS"/>
+<pinref part="U1" gate="G$1" pin="OPTO_BIAS"/>
 <wire x1="172.72" y1="76.2" x2="170.18" y2="76.2" width="0.1524" layer="91"/>
 <label x="170.18" y="76.2" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="OPTO_IN" class="0">
 <segment>
-<pinref part="U$4" gate="G$1" pin="E"/>
+<pinref part="Q2" gate="G$1" pin="E"/>
 <pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="124.46" y1="55.88" x2="124.46" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="53.34" x2="124.46" y2="45.72" width="0.1524" layer="91"/>
@@ -12628,14 +12674,14 @@ Based on Electric Imp's Amber board</text>
 <junction x="124.46" y="45.72"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="OPTO_IN"/>
+<pinref part="U1" gate="G$1" pin="OPTO_IN"/>
 <wire x1="172.72" y1="73.66" x2="170.18" y2="73.66" width="0.1524" layer="91"/>
 <label x="170.18" y="73.66" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="POWER_EN" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="POWER_EN"/>
+<pinref part="U1" gate="G$1" pin="POWER_EN"/>
 <wire x1="172.72" y1="60.96" x2="170.18" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="60.96" x2="170.18" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="55.88" x2="167.64" y2="55.88" width="0.1524" layer="91"/>
