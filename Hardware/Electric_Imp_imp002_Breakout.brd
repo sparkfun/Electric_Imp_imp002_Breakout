@@ -6,20 +6,20 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="inch"/>
+<grid distance="0.01" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
 <layer number="15" name="Route15" color="4" fill="6" visible="no" active="yes"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="16" fill="1" visible="yes" active="yes"/>
-<layer number="22" name="bPlace" color="14" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="14" fill="1" visible="no" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
@@ -34,9 +34,9 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
-<layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="6" fill="1" visible="no" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
@@ -9276,6 +9276,7 @@ Based on Electric Imp's Amber board</text>
 <text x="21.59" y="8.89" size="0.8128" layer="22" font="vector" ratio="15" rot="MR0" align="center">VIN = 3.3 - 17V</text>
 <text x="10.795" y="16.891" size="1.778" layer="21" font="vector" ratio="15" align="bottom-center">+</text>
 <text x="10.795" y="14.351" size="1.778" layer="21" font="vector" ratio="15" align="bottom-center">-</text>
+<text x="13.97" y="12.7" size="1.016" layer="21" font="vector" ratio="15" align="bottom-center">VIN Meas.</text>
 </plain>
 <libraries>
 <library name="SparkFun-Aesthetics">
@@ -10481,12 +10482,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-0.75" y1="0.8" x2="0.75" y2="0.8" width="0.127" layer="51"/>
 <wire x1="-0.75" y1="0.05" x2="-0.75" y2="-0.05" width="0.2032" layer="21"/>
 <wire x1="0.75" y1="0.05" x2="0.75" y2="-0.05" width="0.2032" layer="21"/>
-<wire x1="-0.2" y1="0.1" x2="0.2" y2="0.1" width="0.127" layer="21"/>
-<wire x1="-0.2" y1="0.1" x2="-0.1" y2="0" width="0.127" layer="21"/>
-<wire x1="-0.1" y1="0" x2="0" y2="-0.1" width="0.127" layer="21"/>
-<wire x1="0" y1="-0.1" x2="0.1" y2="0" width="0.127" layer="21"/>
-<wire x1="0.1" y1="0" x2="0.2" y2="0.1" width="0.127" layer="21"/>
-<wire x1="-0.1" y1="0" x2="0.1" y2="0" width="0.127" layer="21"/>
+<wire x1="-0.2" y1="-1.4" x2="0.2" y2="-1.4" width="0.127" layer="21"/>
+<wire x1="-0.2" y1="-1.4" x2="-0.1" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="-0.1" y1="-1.5" x2="0" y2="-1.6" width="0.127" layer="21"/>
+<wire x1="0" y1="-1.6" x2="0.1" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="0.1" y1="-1.5" x2="0.2" y2="-1.4" width="0.127" layer="21"/>
+<wire x1="-0.1" y1="-1.5" x2="0.1" y2="-1.5" width="0.127" layer="21"/>
 <circle x="0.4" y="0.5" radius="0.1" width="0.127" layer="51"/>
 </package>
 </packages>
@@ -10757,7 +10758,7 @@ design rules under a new name.</description>
 <element name="R3" library="SparkFun-Resistors" package="0603-RES" value="330" x="3.81" y="33.02" rot="R180">
 <attribute name="PROD_ID" value="RES-00818" x="3.81" y="33.02" size="1.778" layer="27" font="vector" ratio="15" rot="R180" display="off"/>
 </element>
-<element name="R4" library="SparkFun-Resistors" package="0603-RES" value="62k" x="3.81" y="35.56" rot="R180"/>
+<element name="R4" library="SparkFun-Resistors" package="0603-RES" value="33k" x="3.81" y="35.56" rot="R180"/>
 <element name="JP1" library="SparkFun-Connectors" package="1X15" value="M15" x="41.91" y="1.27" rot="R180"/>
 <element name="JP5" library="SparkFun-Connectors" package="1X01" value="M01PTH" x="3.81" y="22.86"/>
 <element name="R1" library="SparkFun-Resistors" package="0603-RES" value="100k" x="15.875" y="15.24" rot="R90">
