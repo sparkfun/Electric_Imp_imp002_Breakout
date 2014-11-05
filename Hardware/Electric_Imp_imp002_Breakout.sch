@@ -12088,7 +12088,7 @@ This limits VIN to 5V max.</text>
 <text x="13.208" y="110.998" size="1.778" layer="97" rot="R90">Battery Input</text>
 <text x="170.942" y="7.62" size="2.032" layer="94">Shawn Hymel (SparkFun Electronics)
 Based on Electric Imp's Amber board</text>
-<text x="238.76" y="7.62" size="2.54" layer="94">v01</text>
+<text x="238.76" y="7.62" size="2.54" layer="94">v10</text>
 <text x="48.26" y="99.06" size="1.778" layer="97">VIN = 3.3 - 17V</text>
 </plain>
 <instances>
