@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -11909,6 +11909,26 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </device>
 </devices>
 </deviceset>
+<deviceset name="10KOHM1/10W1%(0603)" prefix="R" uservalue="yes">
+<description>RES-00824</description>
+<gates>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="0603" package="0603-RES">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-00824"/>
+<attribute name="VALUE" value="10K" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="SparkFun-Electromechanical">
@@ -12044,6 +12064,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <part name="U$9" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_NAME_WEB" device=""/>
 <part name="LOGO1" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="S"/>
 <part name="LOGO2" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_FLAME" device=".1_INCH"/>
+<part name="R7" library="SparkFun-Resistors" deviceset="10KOHM1/10W1%(0603)" device="0603" value="10K"/>
+<part name="P+4" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12068,7 +12090,9 @@ VDD</text>
 <wire x1="154.94" y1="185.42" x2="154.94" y2="83.82" width="0.1524" layer="97" style="longdash"/>
 <wire x1="154.94" y1="83.82" x2="154.94" y2="35.56" width="0.1524" layer="97" style="longdash"/>
 <wire x1="154.94" y1="83.82" x2="114.3" y2="83.82" width="0.1524" layer="97" style="longdash"/>
-<wire x1="114.3" y1="83.82" x2="0" y2="83.82" width="0.1524" layer="97" style="longdash"/>
+<wire x1="114.3" y1="83.82" x2="73.66" y2="83.82" width="0.1524" layer="97" style="longdash"/>
+<wire x1="73.66" y1="83.82" x2="63.5" y2="83.82" width="0.1524" layer="97" style="longdash"/>
+<wire x1="63.5" y1="83.82" x2="0" y2="83.82" width="0.1524" layer="97" style="longdash"/>
 <wire x1="248.92" y1="124.46" x2="73.66" y2="124.46" width="0.1524" layer="97" style="longdash"/>
 <text x="1.27" y="85.09" size="2.54" layer="97">Input Voltage Source Selection</text>
 <text x="74.93" y="85.09" size="2.54" layer="97">Input Voltage Measurement</text>
@@ -12076,11 +12100,11 @@ VDD</text>
 <text x="156.21" y="125.73" size="2.54" layer="97">Decoupling Capacitors</text>
 <text x="156.21" y="36.83" size="2.54" layer="97">imp002 Module</text>
 <text x="1.27" y="1.27" size="2.54" layer="97">Pin Breakout</text>
-<wire x1="73.66" y1="124.46" x2="73.66" y2="0" width="0.1524" layer="97" style="longdash"/>
+<wire x1="73.66" y1="124.46" x2="73.66" y2="83.82" width="0.1524" layer="97" style="longdash"/>
 <wire x1="114.3" y1="83.82" x2="114.3" y2="0" width="0.1524" layer="97" style="longdash"/>
 <text x="74.93" y="1.27" size="2.54" layer="97">Status LEDs</text>
 <text x="115.57" y="1.27" size="2.54" layer="97">BlinkUp</text>
-<text x="114.3" y="91.44" size="1.778" layer="97">By default, the jumper is
+<text x="114.3" y="110.49" size="1.778" layer="97">By default, the jumper is
 open. Solder the entire
 jumper to allow for VIN
 measurements on the Imp.
@@ -12090,6 +12114,18 @@ This limits VIN to 5V max.</text>
 Based on Electric Imp's Amber board</text>
 <text x="238.76" y="7.62" size="2.54" layer="94">v10</text>
 <text x="48.26" y="99.06" size="1.778" layer="97">VIN = 3.3 - 17V</text>
+<wire x1="63.5" y1="83.82" x2="63.5" y2="0" width="0.1524" layer="97" style="longdash"/>
+<text x="114.3" y="90.17" size="1.778" layer="97">WARNING: By connecting
+this, 50uA will be
+constantly drawn from the
+battery or power source</text>
+<text x="223.52" y="78.74" size="1.778" layer="97">WARNING: If VDDA
+is disconnected 
+from VDD, VDD 
+MUST come up
+before VDDA, or
+it could damage 
+the Imp</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -12177,6 +12213,8 @@ Based on Electric Imp's Amber board</text>
 <instance part="U$9" gate="G$1" x="241.3" y="17.78"/>
 <instance part="LOGO1" gate="G$1" x="236.22" y="45.72"/>
 <instance part="LOGO2" gate="G$1" x="205.74" y="38.1"/>
+<instance part="R7" gate="G$1" x="73.66" y="43.18" rot="R90"/>
+<instance part="P+4" gate="G$1" x="73.66" y="50.8"/>
 </instances>
 <busses>
 </busses>
@@ -12414,6 +12452,11 @@ Based on Electric Imp's Amber board</text>
 <wire x1="33.02" y1="30.48" x2="50.8" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="30.48" x2="50.8" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="P+7" gate="G$1" pin="3.3V"/>
+</segment>
+<segment>
+<pinref part="R7" gate="G$1" pin="2"/>
+<pinref part="P+4" gate="G$1" pin="3.3V"/>
+<wire x1="73.66" y1="48.26" x2="73.66" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VIN" class="0">
@@ -12676,6 +12719,10 @@ Based on Electric Imp's Amber board</text>
 <wire x1="86.36" y1="38.1" x2="86.36" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="30.48" x2="99.06" y2="30.48" width="0.1524" layer="91"/>
 <label x="99.06" y="30.48" size="1.27" layer="95" xref="yes"/>
+<wire x1="86.36" y1="30.48" x2="73.66" y2="30.48" width="0.1524" layer="91"/>
+<junction x="86.36" y="30.48"/>
+<pinref part="R7" gate="G$1" pin="1"/>
+<wire x1="73.66" y1="30.48" x2="73.66" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="LED_G" class="0">
