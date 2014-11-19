@@ -8555,7 +8555,9 @@ See a 3.3V fixed output version of this chip in action on the &lt;a href="https:
 <connect gate="G$1" pin="VOS" pad="6"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="PROD_ID" value="IC-11307"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -10832,7 +10834,7 @@ FQP27P06 -
 <technologies>
 <technology name="">
 <attribute name="PROD_ID" value="TRANS-11308"/>
-<attribute name="VALUE" value="30V, 2.5A"/>
+<attribute name="VALUE" value="2.5A/30V"/>
 </technology>
 </technologies>
 </device>
@@ -11904,7 +11906,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="PROD_ID" value="RES-08416"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -12000,7 +12004,9 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <parts>
 <part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
 <part name="U1" library="SparkFun-DigitalIC" deviceset="ELECTRIC_IMP_IMP002" device="" value="imp002"/>
-<part name="C2" library="SparkFun-Passives" deviceset="CAP" device="0805" value="22uF"/>
+<part name="C2" library="SparkFun-Passives" deviceset="CAP" device="0805" value="22uF">
+<attribute name="PROD_ID" value="CAP-08402"/>
+</part>
 <part name="L1" library="SparkFun-Passives" deviceset="INDUCTOR" device="VLF4012A" value="2.2uH"/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -12015,14 +12021,18 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <part name="GND9" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="JP4" library="SparkFun-Connectors" deviceset="M02" device="PTH" value="M02PTH"/>
 <part name="GND11" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="Q1" library="SparkFun-DiscreteSemi" deviceset="MOSFET-PCHANNEL" device="SMD" value="DMG2307L-7"/>
+<part name="Q1" library="SparkFun-DiscreteSemi" deviceset="MOSFET-PCHANNEL" device="DMG2307L" value="DMG2307L"/>
 <part name="JP3" library="SparkFun-Connectors" deviceset="M02" device="-JST-2MM-SMT" value="M02-JST-2MM-SMT"/>
 <part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="U$3" library="SparkFun-Aesthetics" deviceset="VIN" device=""/>
 <part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="C3" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="100pF"/>
+<part name="C3" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="100pF">
+<attribute name="PROD_ID" value="CAP-07883"/>
+</part>
 <part name="C4" library="SparkFun-Capacitors" deviceset="1.0UF-16V-10%(0603)" device="" value="1.0uF"/>
-<part name="C5" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="100pF"/>
+<part name="C5" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="100pF">
+<attribute name="PROD_ID" value="CAP-07883"/>
+</part>
 <part name="C6" library="SparkFun-Capacitors" deviceset="1.0UF-16V-10%(0603)" device="" value="1.0uF"/>
 <part name="GND7" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND8" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -12032,7 +12042,9 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <part name="P+3" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="SJ1" library="SparkFun-Passives" deviceset="JUMPER-PAD-2-NC_BY_PASTE" device=""/>
 <part name="P+5" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
-<part name="Q2" library="SparkFun-DiscreteSemi" deviceset="PHOTOTRANSISTOR" device="PT17-21C-L41-TR8"/>
+<part name="Q2" library="SparkFun-DiscreteSemi" deviceset="PHOTOTRANSISTOR" device="PT17-21C-L41-TR8">
+<attribute name="DEVICE" value="PT17-21C-L41-TR8"/>
+</part>
 <part name="D2" library="SparkFun-LED" deviceset="LED-RG" device="LTST-C195KGJRKT"/>
 <part name="R2" library="SparkFun-Resistors" deviceset="330OHM1/10W1%(0603)" device="" value="330"/>
 <part name="R3" library="SparkFun-Resistors" deviceset="330OHM1/10W1%(0603)" device="" value="330"/>
@@ -12053,12 +12065,16 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <part name="D1" library="SparkFun-DiscreteSemi" deviceset="DIODE-SCHOTTKY" device="-MBRA140" value="MBRA140"/>
 <part name="U$7" library="SparkFun-Aesthetics" deviceset="VIN" device=""/>
 <part name="GND15" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="U$6" library="SparkFun-Passives" deviceset="JUMPER-PAD-3-NO" device="FULL_BOX_SILK"/>
+<part name="SJ2" library="SparkFun-Passives" deviceset="JUMPER-PAD-3-NO" device="FULL_BOX_SILK"/>
 <part name="R5" library="SparkFun-Resistors" deviceset="33KOHM1/10W1%(0603)" device="" value="33k"/>
-<part name="R6" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="62k"/>
+<part name="R6" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="62k">
+<attribute name="PROD_ID" value="RES-09993"/>
+</part>
 <part name="U$8" library="SparkFun-Aesthetics" deviceset="VIN" device=""/>
 <part name="GND10" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="C7" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="100pF"/>
+<part name="C7" library="SparkFun-Capacitors" deviceset="CAP" device="0603-CAP" value="100pF">
+<attribute name="PROD_ID" value="CAP-07883"/>
+</part>
 <part name="TP1" library="SparkFun-Passives" deviceset="TEST-POINT" device="3X5"/>
 <part name="TP2" library="SparkFun-Passives" deviceset="TEST-POINT" device="3X5"/>
 <part name="U$9" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_NAME_WEB" device=""/>
@@ -12131,7 +12147,9 @@ the Imp</text>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="G$2" x="147.32" y="0"/>
 <instance part="U1" gate="G$1" x="195.58" y="86.36"/>
-<instance part="C2" gate="G$1" x="144.78" y="144.78"/>
+<instance part="C2" gate="G$1" x="144.78" y="144.78">
+<attribute name="PROD_ID" x="144.78" y="144.78" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="L1" gate="G$1" x="129.54" y="152.4" smashed="yes" rot="R90">
 <attribute name="NAME" x="124.46" y="154.94" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="127" y="154.94" size="1.778" layer="96" rot="R90"/>
@@ -12157,9 +12175,13 @@ the Imp</text>
 <instance part="GND5" gate="1" x="66.04" y="109.22" rot="MR0"/>
 <instance part="U$3" gate="G$1" x="66.04" y="121.92"/>
 <instance part="GND6" gate="1" x="220.98" y="55.88" rot="MR0"/>
-<instance part="C3" gate="G$1" x="170.18" y="149.86"/>
+<instance part="C3" gate="G$1" x="170.18" y="149.86">
+<attribute name="PROD_ID" x="170.18" y="149.86" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="C4" gate="G$1" x="180.34" y="149.86"/>
-<instance part="C5" gate="G$1" x="193.04" y="149.86"/>
+<instance part="C5" gate="G$1" x="193.04" y="149.86">
+<attribute name="PROD_ID" x="193.04" y="149.86" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="C6" gate="G$1" x="203.2" y="149.86"/>
 <instance part="GND7" gate="1" x="180.34" y="139.7" rot="MR0"/>
 <instance part="GND8" gate="1" x="203.2" y="139.7" rot="MR0"/>
@@ -12172,7 +12194,8 @@ the Imp</text>
 </instance>
 <instance part="P+5" gate="G$1" x="220.98" y="116.84"/>
 <instance part="Q2" gate="G$1" x="121.92" y="60.96" smashed="yes">
-<attribute name="NAME" x="127" y="60.96" size="1.778" layer="95"/>
+<attribute name="NAME" x="127" y="61.722" size="1.778" layer="95"/>
+<attribute name="DEVICE" x="127" y="59.182" size="1.778" layer="96"/>
 </instance>
 <instance part="D2" gate="G$1" x="88.9" y="58.42" smashed="yes">
 <attribute name="NAME" x="80.264" y="61.976" size="1.778" layer="95"/>
@@ -12200,14 +12223,18 @@ the Imp</text>
 </instance>
 <instance part="U$7" gate="G$1" x="48.26" y="170.18"/>
 <instance part="GND15" gate="1" x="33.02" y="137.16"/>
-<instance part="U$6" gate="G$1" x="99.06" y="106.68" smashed="yes" rot="R180">
+<instance part="SJ2" gate="G$1" x="99.06" y="106.68" smashed="yes" rot="R180">
 <attribute name="NAME" x="96.52" y="106.299" size="1.778" layer="95" rot="R180"/>
 </instance>
 <instance part="R5" gate="G$1" x="91.44" y="114.3"/>
-<instance part="R6" gate="G$1" x="91.44" y="99.06"/>
+<instance part="R6" gate="G$1" x="91.44" y="99.06">
+<attribute name="PROD_ID" x="91.44" y="99.06" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="U$8" gate="G$1" x="83.82" y="116.84"/>
 <instance part="GND10" gate="1" x="83.82" y="93.98"/>
-<instance part="C7" gate="G$1" x="215.9" y="149.86"/>
+<instance part="C7" gate="G$1" x="215.9" y="149.86">
+<attribute name="PROD_ID" x="215.9" y="149.86" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="TP1" gate="G$1" x="132.08" y="76.2"/>
 <instance part="TP2" gate="G$1" x="132.08" y="45.72"/>
 <instance part="U$9" gate="G$1" x="241.3" y="17.78"/>
@@ -12608,7 +12635,7 @@ the Imp</text>
 <label x="170.18" y="91.44" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="2"/>
+<pinref part="SJ2" gate="G$1" pin="2"/>
 <wire x1="104.14" y1="106.68" x2="106.68" y2="106.68" width="0.1524" layer="91"/>
 <label x="106.68" y="106.68" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -12802,14 +12829,14 @@ the Imp</text>
 <net name="N$6" class="0">
 <segment>
 <pinref part="R5" gate="G$1" pin="2"/>
-<pinref part="U$6" gate="G$1" pin="3"/>
+<pinref part="SJ2" gate="G$1" pin="3"/>
 <wire x1="96.52" y1="114.3" x2="99.06" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="114.3" x2="99.06" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
-<pinref part="U$6" gate="G$1" pin="1"/>
+<pinref part="SJ2" gate="G$1" pin="1"/>
 <wire x1="99.06" y1="101.6" x2="99.06" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="99.06" y1="99.06" x2="96.52" y2="99.06" width="0.1524" layer="91"/>
