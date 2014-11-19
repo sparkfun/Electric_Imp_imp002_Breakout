@@ -10058,6 +10058,7 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 </connects>
 <technologies>
 <technology name="">
+<attribute name="PROD_ID" value="CONN-09863" constant="no"/>
 <attribute name="SKU" value="PRT-09914" constant="no"/>
 </technology>
 </technologies>
@@ -10914,7 +10915,7 @@ B340A  3A 40V SMA &lt;br&gt;</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="PHOTOTRANSISTOR" prefix="Q">
+<deviceset name="PHOTOTRANSISTOR" prefix="Q" uservalue="yes">
 <gates>
 <gate name="G$1" symbol="PHOTOTRANSISTOR" x="0" y="0"/>
 </gates>
@@ -12042,9 +12043,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <part name="P+3" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="SJ1" library="SparkFun-Passives" deviceset="JUMPER-PAD-2-NC_BY_PASTE" device=""/>
 <part name="P+5" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
-<part name="Q2" library="SparkFun-DiscreteSemi" deviceset="PHOTOTRANSISTOR" device="PT17-21C-L41-TR8">
-<attribute name="DEVICE" value="PT17-21C-L41-TR8"/>
-</part>
+<part name="Q2" library="SparkFun-DiscreteSemi" deviceset="PHOTOTRANSISTOR" device="PT17-21C-L41-TR8" value="PT17-21C-L41-TR8"/>
 <part name="D2" library="SparkFun-LED" deviceset="LED-RG" device="LTST-C195KGJRKT"/>
 <part name="R2" library="SparkFun-Resistors" deviceset="330OHM1/10W1%(0603)" device="" value="330"/>
 <part name="R3" library="SparkFun-Resistors" deviceset="330OHM1/10W1%(0603)" device="" value="330"/>
@@ -12142,6 +12141,12 @@ MUST come up
 before VDDA, or
 it could damage 
 the Imp</text>
+<text x="116.84" y="22.86" size="1.778" layer="97" align="top-left">Labeled as BU on
+the board. Make
+sure your phone/
+computer screen is
+over this
+phototransistor.</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -12193,10 +12198,7 @@ the Imp</text>
 <attribute name="NAME" x="226.06" y="104.14" size="1.778" layer="95" rot="R90"/>
 </instance>
 <instance part="P+5" gate="G$1" x="220.98" y="116.84"/>
-<instance part="Q2" gate="G$1" x="121.92" y="60.96" smashed="yes">
-<attribute name="NAME" x="127" y="61.722" size="1.778" layer="95"/>
-<attribute name="DEVICE" x="127" y="59.182" size="1.778" layer="96"/>
-</instance>
+<instance part="Q2" gate="G$1" x="121.92" y="60.96"/>
 <instance part="D2" gate="G$1" x="88.9" y="58.42" smashed="yes">
 <attribute name="NAME" x="80.264" y="61.976" size="1.778" layer="95"/>
 <attribute name="VALUE" x="102.235" y="41.148" size="1.778" layer="96" rot="R90"/>
