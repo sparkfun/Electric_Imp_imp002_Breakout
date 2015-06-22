@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="7.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -12134,13 +12134,16 @@ Based on Electric Imp's Amber board</text>
 this, 50uA will be
 constantly drawn from the
 battery or power source</text>
-<text x="223.52" y="78.74" size="1.778" layer="97">WARNING: If VDDA
+<text x="223.52" y="93.98" size="1.778" layer="97" align="top-left">WARNING: If VDDA
 is disconnected 
 from VDD, VDD 
 MUST come up
-before VDDA, or
-it could damage 
-the Imp</text>
+before VDDA.
+Additionally, if
+VDDA us greater
+than VDD, it 
+could damage the
+imp002 module.</text>
 <text x="116.84" y="22.86" size="1.778" layer="97" align="top-left">Labeled as BU on
 the board. Make
 sure your phone/
