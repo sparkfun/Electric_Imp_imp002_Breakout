@@ -1,4 +1,4 @@
-Electric Imp imp002 Breakout
+SparkFun Electric Imp imp002 Breakout
 ============================
 
 ![Electric Imp imp002 Breakout](https://cdn.sparkfun.com//assets/parts/9/8/9/0/12958-01.jpg)
@@ -10,7 +10,7 @@ The imp002 is a surface mount Electric Imp module with its own breakout board an
 
 Repository Contents
 -------------------
-
+* **/Documentation** - SVG files of the board layout.
 * **/Hardware** - Eagle PCB layout files
 * **/Production** - Files to support SparkFun production
 
@@ -29,13 +29,12 @@ Version History
 
 License Information
 -------------------
+
 This product is _**open source**_! 
 
-The **hardware** is released under [Creative Commons ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/).
+Please review the LICENSE.md file for license information. 
 
-The **code** is beerware; if you see me (or any other SparkFun employee) at the local, and you've found our code helpful, please buy us a round!
-
-Please use, reuse, and modify these files as you see fit. Please maintain attribution to SparkFun Electronics and release anything derivative under the same license.
+If you have any questions or concerns on licensing, please contact techsupport@sparkfun.com.
 
 Distributed as-is; no warranty is given.
 
